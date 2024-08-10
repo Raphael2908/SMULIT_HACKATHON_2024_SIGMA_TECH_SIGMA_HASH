@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "sigma_hash_backend": {
+      "candid": "src/sigma_hash_backend/sigma_hash_backend.did",
+      "package": "sigma_hash_backend",
+      "type": "rust"
+    },
+    "sigma_hash_frontend": {
+      "dependencies": [
+        "sigma_hash_backend"
+      ],
+      "source": [
+        "src/sigma_hash_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "sigma_hash_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

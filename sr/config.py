@@ -1,0 +1,1 @@
+canister_ip = "172.20.10.5" # set properly

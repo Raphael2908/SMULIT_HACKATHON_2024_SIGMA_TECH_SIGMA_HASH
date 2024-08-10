@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="/static/styles.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>
+
+            var xhr = new XMLHttpRequest();
+
+            function storeUUID() {
+                var uid = document.querySelector("#uid").value;
+                alert("TODO: store UUID " + uid);
+            }
+
+            function checkUUID() {
+                var uid = document.querySelector("#uid").value;
+                alert("TODO: check UUID" + uid);
+            }
+    
+        </script>
+    </head>
+    <body>
+
+        <p id="greeting">{{ greeting }} How may we assist you today?</p>
+
+        <div id="form_container">
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <input type="text" placeholder="UUID" name="uid" id="uid"><br>
+                <input type="file" name="img" class="button" value="Choose File" accept="image/*">
+                <input type="submit" class="button" value="Generate UUID">
+                <input type="button" class="button" id="check_uid"value="Check UUID" name="store_or_check" onclick="checkUUID()"><br>
+                <!-- <input value="{{ uid }}" readonly="readonly"><br> -->
+            </form>
+        </div>
+
+        <div><p id="new_uid_display">{{ uid }}</p></div>
+
+    </body>
+</html>

@@ -1,0 +1,9 @@
+type Hash = record {
+    "id": text;
+};
+
+service : {
+    "getSelf": () -> (Hash) query;
+    "get": (text) -> (Hash) query;
+    "update": (Hash) -> ();
+}

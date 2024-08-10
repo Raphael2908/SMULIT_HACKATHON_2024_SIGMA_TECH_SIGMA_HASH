@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/sigma_hash_backend"
+]
+resolver = "2"
